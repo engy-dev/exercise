@@ -12,6 +12,7 @@
 			<h1>Les Bonnes Pièces</h1>
 		</header>
 		<main>
+			<!-- Menu de recherche -->
 			<section class="filtres">
 				<h3>Filtres</h3>
 				<button class="btn-trier">Trier par prix croissant</button>
@@ -21,15 +22,19 @@
 				<button class="btn-decroissant">Trier par prix décroissant</button>
 				<br>
 				<button class="btn-nodesc">Filtrer les pièces sans description</button>
+				<br>
+				<p>Prix maximum:</p>
+				<input type="range" name="prix-max" id="prix-max" min="0" max="60" step="5">
 			</section>
 
 			<!-- Fiches produits -->
 			<section class="fiches">
+				<!-- Code ajouté -->
 				<div class="abordables">
-					<p>Pièces abordables :</p>
+
 				</div>
-				<div class="disponible">
-					<p> Pièces disponible :</p>
+				<div class="disponibles">
+
 				</div>
 			</section>
 		</main>
