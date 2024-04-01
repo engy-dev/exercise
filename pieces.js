@@ -90,3 +90,21 @@ for(let i=0; i < noms.length ; i++){
 }
 document.querySelector('.abordables')
     .appendChild(abordablesElements)
+
+    const disponibleElement = document.createElement('ul');
+    // displaying available items 
+    const nomsDisponible = pieces.map(piece => piece.nom);
+    const prixDisponible = pieces.map(piece => piece.prix);
+   for(let i = pieces.length -1 ; i >= 0; i--){
+    if(pieces[i].disponibilite === false){
+        nomsDisponible.splice(i,1);
+        prixDisponible.splice(i,1);
+    }
+}
+for(let i=0; i < nomsDisponible.length ; i++){
+    const nomElement = document.createElement('li');
+    nomElement.innerText = '${nomsDisponible[i]} - ${prixDisponible[i]} €'
+    disponibleElements.appendChild(nomElement)
+}
+
+document.querySelector('.disponible').appendChild(disponibleElements);
