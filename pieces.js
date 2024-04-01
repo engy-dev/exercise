@@ -82,7 +82,6 @@ boutonDecroissant.addEventListener("click", function () {
 });
 
 const boutonNoDescription = document.querySelector(".btn-nodesc");
-
 boutonNoDescription.addEventListener("click", function () {
     const piecesFiltrees = pieces.filter(function (piece) {
         return piece.description
